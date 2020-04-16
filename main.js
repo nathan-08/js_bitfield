@@ -20,8 +20,8 @@ function checkForFlags() {
   console.log ('FLAG_D: ', !!(FLAG_D & bitfield))
 }
 function setFlag(flag) {
-  bitfield += flag;
+  bitfield |= flag;
 }
 function unsetFlag(flag) {
-  bitfield -= flag;
+  bitfield = bitfield & ~flag;
 }
