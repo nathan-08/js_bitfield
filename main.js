@@ -23,5 +23,5 @@ function setFlag(flag) {
   bitfield |= flag;
 }
 function unsetFlag(flag) {
-  bitfield = bitfield & ~flag;
+  bitfield &= ~flag;
 }
