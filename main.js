@@ -1,7 +1,6 @@
-// bitfields
-let bitfield = 0b0000;
-const FLAG_A = 0b0001;
-const FLAG_B = 0b0010;
+let bitfield = 0b0000; // <- bitfield starts out empty
+const FLAG_A = 0b0001; // <- define flags as binary values with
+const FLAG_B = 0b0010; //    a single bit 'on'
 const FLAG_C = 0b0100;
 const FLAG_D = 0b1000;
 
@@ -20,8 +19,8 @@ function checkForFlags() {
   console.log ('FLAG_D: ', !!(FLAG_D & bitfield))
 }
 function setFlag(flag) {
-  bitfield |= flag;
+  bitfield |= flag;           // <- use binary OR to set flag
 }
 function unsetFlag(flag) {
-  bitfield &= ~flag;
+  bitfield &= ~flag;          // <- use binary AND NOT to unset flag
 }
